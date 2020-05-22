@@ -608,7 +608,7 @@ pub async fn cli() -> Result<(), Box<dyn Error>> {
             #[cfg(not(feature = "starship-prompt"))]
             {
                 format!(
-                    "\x1b[32m{}{}\x1b[m> ",
+                    "\x1b[32m{}{}\x1b[m>\n$ ",
                     cwd,
                     match current_branch() {
                         Some(s) => format!("({})", s),
